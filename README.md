@@ -126,7 +126,7 @@ switch -glob $primary_group {
 ```bash
 VASP-vtst-beef
 QuantumEspresso(QE)-Pybeef
-ASE and interfacer to VASP/QE
+ASE and interfacer to VASP/QE (3.9.1 and 3.13.0 available)
 gnuplot
 povray
 vaspkit
