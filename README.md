@@ -54,6 +54,10 @@ Add the following line to your `~/.bashrc` to initialzie enviromet and modules f
 
 `source  /scratch/alevoj1/Scripts/group_bashrc`
 
+```bash
+source ~/.bashrc
+```
+
 You should see a new section `/opt/user/p_alevoj/modulefiles/` added when you type `module avail` from terminal
 ```bash
 
@@ -76,6 +80,20 @@ gcc/openmpi/2.1.0             gpu/cuda/default              intel/17.0.3        
 gcc/openmpi/default           gpu/gcc/gromacs/5.1.4         intel/icc                     intel/openmpi/default
 gcc/qe/6.1                    gpu/gcc/gromacs/default       intel/intelpython2/2017.2.045 intel/vasp/5.4.1
 ```
+
+run Python in interactive mode by typing:
+
+```bash
+python
+```
+
+and make sure the following commands work:
+
+```python
+import ase
+import numpy
+```
+
 ## vojgrp-env ##
 ```tcl
 #%Module1.0#####################################################################
