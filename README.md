@@ -1,5 +1,5 @@
 # Introduction to Chestnut
-## X-forwarding software you need before login 
+## Software you need to have on your computer before login 
 ### Mac OSX
 Download and install:
 
