@@ -133,3 +133,36 @@ vaspkit
 Python package: matplotlib, numpy, scipy (system-wide), sklearn (group)
 ```
 
+## Sample Sbatch Script ##
+```bash
+#!/bin/bash
+
+#SBATCH -N  1
+#SBATCH --tasks-per-node=32
+#SBATCH -t 6:30:00
+#SBATCH -J eds-test
+#SBATCH -o out.%j
+#SBATCH -e err.%j
+#SBATCH --mail-user=liangzha@seas.upenn.edu
+#SBATCH --mail-type=END
+
+
+####### VASP-VTBF ###########
+module load gcc/vasp-vtst-beef
+mpirun vasp_std
+#############################
+
+####### Quantum-Espresso ####
+#module load gcc/qe-pybeef
+#cd $SLURM_SUBMIT_DIR
+#export OMP_NUM_THREADS=1
+#python esp-example.py
+##########################
+
+
+####### ASE-VASP ##########
+#module load ase-vasp/run
+#python asevasp-example.py
+#########################
+```
+
