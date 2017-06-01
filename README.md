@@ -166,3 +166,7 @@ mpirun vasp_std
 #########################
 ```
 
+## Run your test
+
+Please refere to `/scratch/alevoj1/test` for test calcualtions 
+
