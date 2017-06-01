@@ -50,7 +50,7 @@ ssh -X Pennkey@chestnut-login.seas.upenn.edu
 ```
 
 ## First time log in  ##
-Add the following line to your ~/.bashrc to initialzie enviromet and modules for Vojvodic group.   
+Add the following line to your `~/.bashrc` to initialzie enviromet and modules for Vojvodic group.   
 
 `source  /scratch/alevoj1/Scripts/group_bashrc`
 
@@ -78,3 +78,13 @@ gcc/qe/6.1                    gpu/gcc/gromacs/default       intel/intelpython2/2
 ```
 
 ## Package available ##
+```bash
+VASP-vtst-beef
+QuantumEspresso(QE)-Pybeef
+ASE and interfacer to VASP/QE
+gnuplot
+povray
+vaspkit
+Python package: 
+```
+
