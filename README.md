@@ -76,6 +76,33 @@ gcc/openmpi/2.1.0             gpu/cuda/default              intel/17.0.3        
 gcc/openmpi/default           gpu/gcc/gromacs/5.1.4         intel/icc                     intel/openmpi/default
 gcc/qe/6.1                    gpu/gcc/gromacs/default       intel/intelpython2/2017.2.045 intel/vasp/5.4.1
 ```
+## vojgrp-env ##
+```tcl
+#%Module1.0#####################################################################
+##
+## mygroup: install my group specific package directory
+##
+
+module load ase/3.9.1
+# Export to User.
+
+set base "/opt/user"
+set primary_group [exec id -ng]
+switch -glob $primary_group {
+  p_* {
+    prepend-path    PATH            $base/$primary_group/bin
+    prepend-path    PATH            $base/$primary_group/bin/vtstscripts
+    prepend-path    PYTHONPATH      $base/$primary_group/lib/python2.7/site-packages
+    prepend-path    PYTHONPATH      $base/$primary_group/lib64/python2.7/site-packages
+    prepend-path    MANPATH         $base/$primary_group/share/man
+    prepend-path    LD_LIBRARY_PATH $base/$primary_group/lib
+    prepend-path    LIBRARY_PATH    $base/$primary_group/lib
+    prepend-path    C_INCLUDE_PATH  $base/$primary_group/include
+    prepend-path    ESP_PSP_PATH    /scratch/alevoj1/esp-psp/v2/
+    prepend-path    VASP_PP_PATH   /scratch/alevoj1/vasp_psp/pseudo52/
+  }
+}
+```
 
 ## Package available ##
 ```bash
@@ -85,6 +112,6 @@ ASE and interfacer to VASP/QE
 gnuplot
 povray
 vaspkit
-Python package: 
+Python package: matplotlib, numpy, scipy (system-wide), sklearn (group)
 ```
 
